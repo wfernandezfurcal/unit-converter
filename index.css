@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root,
+:root.light {
+  /* Colours */
+  --secondary: #B381C6;
+  --secondary-accent: #D5B8EA;
+  --btn-text: #333333;
+  --base: #FFFFFF;
+
+  /* Light theme */
+  --fg: #5C5C5C;
+  --fg-accent: #9691a3;
+  --bg: #FFFFFF;
+  --bg-accent: #E7E7E7;
+
+  font-family: 'Inter', sans-serif;
+}
+
+:root.dark {
+  /* Dark theme */
+  --fg: #FFFFFF;
+  --fg-accent: #E7DFFC;
+  --bg: #273549;
+  --bg-accent: #1F2937;
+}
+
+/* CSS Reset by Josh Comeau */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    text-align: center;
+  /* min-height: 100vh;
+  line-height: 1.5; */
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  text-align: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Remove inputs Arrows/Spinners  */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Base styling */
+
+.container {
+    min-height: 729px;
+    max-width: 550px;
+    border: 1px solid red;
+    margin: auto;
+}
+
+/* Header Section */
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #6943FF;
+    min-height: 285px;
+    color: #FFFFFF;
+}
+
+.title-header {
+    font-size: 28px;
+}
+
+button {
+    padding: 9px 27px;
+    /* font-size: 16px; */
+    border: none;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    
+}
+
+input {
+    min-height: 83px;
+    max-width: 117px;
+    background: none;
+    border: 2px solid #B295FF;
+    border-radius: 5px;
+    font-size: 58px;
+    font-weight: 800;
+    color: inherit;
+
+}
