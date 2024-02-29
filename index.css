@@ -2,17 +2,11 @@
 
 :root,
 :root.light {
-  /* Colours */
-  --secondary: #B381C6;
-  --secondary-accent: #D5B8EA;
-  --btn-text: #333333;
-  --base: #FFFFFF;
-
   /* Light theme */
-  --fg: #5C5C5C;
-  --fg-accent: #9691a3;
-  --bg: #FFFFFF;
-  --bg-accent: #E7E7E7;
+  --fg: #353535;
+  --fg-accent: #5A537B;
+  --bg: #F4F4F4;
+  --bg-accent: #FFFFFF;
 
   font-family: 'Inter', sans-serif;
 }
@@ -20,9 +14,9 @@
 :root.dark {
   /* Dark theme */
   --fg: #FFFFFF;
-  --fg-accent: #E7DFFC;
-  --bg: #273549;
-  --bg-accent: #1F2937;
+  --fg-accent: #CCC1FF;
+  --bg: #1F2937;
+  --bg-accent: #273549;
 }
 
 /* CSS Reset by Josh Comeau */
@@ -40,8 +34,7 @@
 
 body {
     text-align: center;
-  /* min-height: 100vh;
-  line-height: 1.5; */
+    background-color: var(--bg);
 }
 
 input,
@@ -82,10 +75,12 @@ input[type=number] {
 /* Base styling */
 
 .container {
+    margin: auto;
     min-height: 729px;
     max-width: 550px;
-    border: 1px solid red;
-    margin: auto;
+    box-shadow:
+    inset 0 3em 3em rgba(0, 0, 0, 0.1),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
 /* Header Section */
@@ -107,11 +102,9 @@ input[type=number] {
 
 button {
     padding: 9px 27px;
-    /* font-size: 16px; */
     border: none;
     border-radius: 5px;
-    background-color: #FFFFFF;
-    
+    background-color: #FFFFFF;   
 }
 
 input {
@@ -123,5 +116,63 @@ input {
     font-size: 58px;
     font-weight: 800;
     color: inherit;
-
 }
+
+/* Main section */
+
+.main-section {
+    background-color: var(--bg);
+    min-height: 444px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-section div {
+    padding: 31px 77px;
+    background-color: var(--bg-accent);
+}
+
+.main-section div h3 {
+    margin-bottom: 9px;
+    color: var(--fg-accent);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.main-section div p {
+    color: var(--fg);
+    font-weight: 400px;
+    font-size: 14px;
+}
+
+/* Dark mode toggle */
+
+.btn-theme {
+    position: absolute;
+    font-size: 1.5rem;
+    background: var(--bg);
+    color: var(--fg-accent);
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    --fa-display: grid;
+    place-content: center center;
+    top: 1%;
+    left: 1%;
+    margin: auto;
+  }
+  
+  .rotate {
+    -moz-transition: transform .5s linear;
+    -webkit-transition: transform .5s linear;
+    transition: transform .5s linear;
+  }
+  
+  .rotate.triggered {
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
