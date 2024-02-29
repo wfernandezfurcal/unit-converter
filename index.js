@@ -1,3 +1,40 @@
+// Unit Converter
+/*
+Formula
+1 meter = 3.281 feet
+1 liter = 0.264 gallon
+1 kilogram = 2.204 pound
+*/
+// Get elements
+const inputUnitEl = document.getElementById("unit");
+const lenghtPar = document.getElementById("lenghtPar");
+const volumePar = document.getElementById("volumePar");
+const massPar = document.getElementById("massPar");
+
+//Convert Function
+function convert(){
+  console.log(inputUnitEl.value);
+
+  //Meter/Feet
+  let feet = (inputUnitEl.value * 3.281).toFixed(3);
+  let meters = (inputUnitEl.value / 3.281).toFixed(3);
+  //Fill paragraph
+  lenghtPar.innerText = `${inputUnitEl.value} meters = ${feet} feet | ${inputUnitEl.value} feet = ${meters} meters`;
+  
+  //Liters/Gallons
+  let liters = (inputUnitEl.value * 0.264).toFixed(3);
+  let gallons = (inputUnitEl.value / 0.264).toFixed(3);
+  //Fill paragraph
+  volumePar.innerText = `${inputUnitEl.value} liters = ${liters} gallons | ${inputUnitEl.value} gallons = ${gallons} liters`;
+  
+  //Kilograms/Pounds
+  let kilograms = (inputUnitEl.value * 2.204).toFixed(3);
+  let pounds = (inputUnitEl.value / 2.204).toFixed(3);
+  //Fill paragraph
+  massPar.innerText = `${inputUnitEl.value} kilos = ${feet} pounds | ${inputUnitEl.value} pounds = ${kilograms} kilos`;
+}
+
+
 // Dark mode toggle
 const btnTheme = document.querySelector(".btn-theme");
 
