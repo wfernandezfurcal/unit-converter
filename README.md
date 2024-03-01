@@ -30,4 +30,4 @@ This project reinforced my knowledge of JavaScript, and provided opportunity to 
 
 ## Live demo
 
-View the app [live preview](https://wfunitconvert.netlify.app/)
+View the app [live preview](https://wfunitconverter.netlify.app/)
